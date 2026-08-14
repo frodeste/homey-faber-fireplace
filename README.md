@@ -25,13 +25,7 @@ The current target is the Faber MatriX family with a Honeywell ITC v2 controller
 
 ## Test on a Homey Pro
 
-1. Put the ITC into app pairing mode: hold **OFF** on the existing remote until its blue LED pulses. Pairing mode lasts about 60 seconds.
-2. Keep the Faber phone app fully closed; the controller may not accept another active BLE connection.
-3. Install dependencies with `npm install`.
-4. Log in with `npx homey login`, then run `npx homey app run`.
-5. Add **Faber ITC Fireplace** in Homey while the controller is still in pairing mode.
-
-Start by testing status and **OFF**. Test ignition only while physically present and follow the fireplace manufacturer's safety instructions. If pairing succeeds but status times out, collect the Homey BLE Developer Tools service list and an Android Bluetooth HCI snoop capture; do not repeatedly send unverified ignition commands.
+Follow the [installation and safe commissioning guide](docs/installation-and-testing.md). It covers Homey CLI login, development installation, ITC pairing, the test sequence, expected logs, and troubleshooting.
 
 ## Development
 
@@ -41,6 +35,15 @@ npm run build
 ```
 
 Do not edit generated `app.json`; edit `.homeycompose/app.json` and driver compose files.
+
+## Documentation
+
+- [Install and safely test on Homey](docs/installation-and-testing.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
+- [Homey Apps SDK documentation](https://apps.developer.homey.app/)
+- [Homey Bluetooth LE documentation](https://apps.developer.homey.app/wireless/bluetooth)
+- [Faber MatriX ITC user manual (English, PDF)](https://www.faberfires.com/sites/g/files/emiian311/files/2023-03/40011722-2141%20User%20manual%20MatriX%20ITC%20%28Honeywell%29%20ENG.pdf)
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), especially the capture-redaction and physical safety guidance, before submitting protocol traces.
 
