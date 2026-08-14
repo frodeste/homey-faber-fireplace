@@ -1,0 +1,34 @@
+{
+  "id": "faber-itc",
+  "name": { "en": "Faber ITC Fireplace" },
+  "class": "heater",
+  "connectivity": ["ble"],
+  "capabilities": [
+    "onoff",
+    "target_temperature",
+    "measure_temperature",
+    "flame_height",
+    "flame_width"
+  ],
+  "capabilitiesOptions": {
+    "target_temperature": { "min": 5, "max": 35, "step": 0.5 }
+  },
+  "settings": [
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": { "en": "Status polling interval (seconds)" },
+      "value": 30,
+      "min": 15,
+      "max": 3600
+    }
+  ],
+  "pair": [
+    { "id": "list_devices", "template": "list_devices", "navigation": { "next": "add_devices" } },
+    { "id": "add_devices", "template": "add_devices" }
+  ],
+  "images": {
+    "small": "/drivers/faber-itc/assets/images/small.png",
+    "large": "/drivers/faber-itc/assets/images/large.png"
+  }
+}

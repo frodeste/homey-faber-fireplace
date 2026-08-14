@@ -1,0 +1,17 @@
+{
+  "id": "com.faber.fireplace",
+  "version": "0.1.0",
+  "sdk": 3,
+  "compatibility": ">=12.0.0",
+  "platforms": ["local"],
+  "name": { "en": "Faber Fireplace" },
+  "description": { "en": "Local Bluetooth control for Faber ITC fireplaces" },
+  "category": ["climate"],
+  "brandColor": "#8C211B",
+  "permissions": ["homey:wireless:ble"],
+  "author": { "name": "Community" },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  }
+}

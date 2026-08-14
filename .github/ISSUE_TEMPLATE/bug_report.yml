@@ -1,0 +1,39 @@
+name: Bug report
+description: Report reproducible incorrect behavior
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Stop using the integration immediately if behavior could be unsafe. Do not test ignition remotely.
+  - type: input
+    id: hardware
+    attributes:
+      label: Fireplace and controller
+      description: Model and controller HW/SW versions, without Bluetooth addresses or serial numbers.
+    validations:
+      required: true
+  - type: input
+    id: homey
+    attributes:
+      label: Homey environment
+      description: Homey model, Homey OS version, and app version.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      description: Remove Bluetooth addresses, credentials, and personal information.

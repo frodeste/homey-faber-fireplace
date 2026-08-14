@@ -1,0 +1,31 @@
+{
+  "name": "com.faber.fireplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Homey app for Faber ITC fireplaces",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frodeste/homey-faber-fireplace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frodeste/homey-faber-fireplace/issues"
+  },
+  "homepage": "https://github.com/frodeste/homey-faber-fireplace#readme",
+  "main": "app.js",
+  "scripts": {
+    "build": "homey app build",
+    "lint": "homey app validate",
+    "validate": "homey app validate --level publish",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "homey": "^4.4.2"
+  },
+  "devDependencies": {
+    "homey": "^4.4.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

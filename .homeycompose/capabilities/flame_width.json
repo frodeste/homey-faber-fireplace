@@ -1,0 +1,10 @@
+{
+  "type": "enum",
+  "title": { "en": "Flame width" },
+  "getable": true,
+  "setable": true,
+  "values": [
+    { "id": "narrow", "title": { "en": "Narrow" } },
+    { "id": "wide", "title": { "en": "Wide" } }
+  ]
+}

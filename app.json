@@ -1,0 +1,121 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.faber.fireplace",
+  "version": "0.1.0",
+  "sdk": 3,
+  "compatibility": ">=12.0.0",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Faber Fireplace"
+  },
+  "description": {
+    "en": "Local Bluetooth control for Faber ITC fireplaces"
+  },
+  "category": [
+    "climate"
+  ],
+  "brandColor": "#8C211B",
+  "permissions": [
+    "homey:wireless:ble"
+  ],
+  "author": {
+    "name": "Community"
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  },
+  "drivers": [
+    {
+      "id": "faber-itc",
+      "name": {
+        "en": "Faber ITC Fireplace"
+      },
+      "class": "heater",
+      "connectivity": [
+        "ble"
+      ],
+      "capabilities": [
+        "onoff",
+        "target_temperature",
+        "measure_temperature",
+        "flame_height",
+        "flame_width"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 5,
+          "max": 35,
+          "step": 0.5
+        }
+      },
+      "settings": [
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Status polling interval (seconds)"
+          },
+          "value": 30,
+          "min": 15,
+          "max": 3600
+        }
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "/drivers/faber-itc/assets/images/small.png",
+        "large": "/drivers/faber-itc/assets/images/large.png"
+      }
+    }
+  ],
+  "capabilities": {
+    "flame_height": {
+      "type": "number",
+      "title": {
+        "en": "Flame height"
+      },
+      "getable": true,
+      "setable": true,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "uiComponent": "slider"
+    },
+    "flame_width": {
+      "type": "enum",
+      "title": {
+        "en": "Flame width"
+      },
+      "getable": true,
+      "setable": true,
+      "values": [
+        {
+          "id": "narrow",
+          "title": {
+            "en": "Narrow"
+          }
+        },
+        {
+          "id": "wide",
+          "title": {
+            "en": "Wide"
+          }
+        }
+      ]
+    }
+  }
+}

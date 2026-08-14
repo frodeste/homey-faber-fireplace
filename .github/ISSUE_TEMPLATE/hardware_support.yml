@@ -1,0 +1,35 @@
+name: Hardware support report
+description: Report whether a fireplace/controller works
+title: "[Hardware]: "
+labels: [hardware]
+body:
+  - type: input
+    id: fireplace
+    attributes:
+      label: Fireplace model
+    validations:
+      required: true
+  - type: input
+    id: controller
+    attributes:
+      label: Controller and HW/SW versions
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Fully working
+        - Partially working
+        - Pairing only
+        - Not detected
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands safely tested
+      description: Explain which status and control operations were confirmed.
+    validations:
+      required: true
