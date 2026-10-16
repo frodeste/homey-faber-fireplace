@@ -20,10 +20,10 @@
     "test": "node --test"
   },
   "dependencies": {
-    "homey": "^4.4.2"
+    "homey": "^4.6.0"
   },
   "devDependencies": {
-    "homey": "^4.4.2"
+    "homey": "^4.6.0"
   },
   "engines": {
     "node": ">=18"
